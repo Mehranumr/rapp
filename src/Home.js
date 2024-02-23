@@ -1,13 +1,12 @@
+import { createContext } from "react";
 import "./App.css";
-import Content from "./Components/Content/Content";
-import Header from "./Components/Header/Header";
-
+import { UserProvider } from "./Context/UserContext";
+import Login from "./Components/Login";
 function Home() {
   return (
-    <>
-      <Header title={"Main Page"} />
-      <Content />
-    </>
+    <UserProvider>
+      <Login />
+    </UserProvider>
   );
 }
 
